@@ -1,7 +1,12 @@
+body {
+	background-image: url("Photos/background.jpg");
+	background-repeat: repeat;
+  }
+
 #menu {
 height: 24px;
 position: fixed;
-background-color: #F7F7F7;
+background-color: #b89e68;
 border-radius: 5px;
 padding: 10px;
 display: flex;
@@ -17,9 +22,9 @@ margin: 0 16px;
 
 #menu a {
 text-decoration: none;
-color: #555;
+color: #303030;
 font-weight: bold;
-font-size: 16px;
+font-size: 24px;
 padding: 10px;
 border-radius: 5px;
 transition: all 0.3s ease;
@@ -27,73 +32,50 @@ transition: all 0.3s ease;
 
 #menu a:hover {
 background-color: #555;
-color: #F7F7F7;
+color: #ffffff;
 }
 
-#a a {
-background-color: #FFDAB9;
-}
-
-#b a {
-background-color: #ADD8E6;
-}
-
-#c a {
-background-color: #FFC0CB;
-}
-
-#d a {
-background-color: #90EE90;
-}
-
-#e a {
-background-color: #F0E68C;
-}
-
-#h a {
-background-color: #f16464;
-}
-
-#f a {
-background-color: #D3D3D3;
-}
-
-#g a {
-background-color: #FFA07A;
-}
-
-
-/* Style for section titles */
 h2 {
-font-size: 28px;
+font-size: 36px;
 font-weight: bold;
 text-align: center;
 margin-top: 40px;
 margin-bottom: 20px;
 text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-color: #333;
+color: #000000;
 }
 
-/* Style for section title underline */
 h2::after {
 content: '';
 display: block;
 height: 3px;
 width: 60px;
 margin: 20px auto 30px auto;
-background-color: #27ae60;
+background-color: #5e4800;
 }
 
 p {
-font-size: 18px;
+
+	background-color: rgba(252, 228, 165, 0.4);
+	font-size: 20px;
 line-height: 1.5;
-/* margin-bottom: 20px; */
-color: #333;
+color: #000000;
 margin: auto;
 text-align: center;
 width: 800px;
+font-weight: bold;
 }
 
+ul{
+	background-color: rgba(252, 228, 165, 0.4);
+	font-size: 16px;
+	line-height: 1.5;
+	color: #000000;
+	margin: auto;
+	width: 800px;
+	font-weight: bold;
+	}
+	
 #img1{
 display: block;
 margin-left: auto;
