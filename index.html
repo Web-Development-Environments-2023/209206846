@@ -104,31 +104,23 @@
 <div class="differences">
   <p>Main Differences Between Web1, Web2, and Web3</p>
   <br>
-  <ul style="margin-left: 18%;">
-    <li>
-      <strong>Web1:</strong> The first generation of the World Wide Web was a simple platform that consisted of static HTML pages that could only be viewed in a web browser: 
-      <ul>
-        <li>Use case: Simple informational website like a business card or brochure</li>
-      </ul>
-    </li>
-    <li>
-      <strong>Web2:</strong>The second generation of the World Wide Web introduced new technologies and concepts such as dynamic 
-      <br> web pages, social media, and user-generated content
-      <br> More interactive and dynamic with JavaScript and other scripting languages:
-      <ul>
-        <li>Use case: Dynamic web applications with interactive features -> Facebook, <br> 
-          which is a social networking site that allows users to create profiles, share content, and connect with friends and family. <br> 
-          Other examples of Web2 sites include YouTube, Twitter, and Reddit.</li>
-      </ul>
-    </li>
-    <li>
-      <strong>Web3:</strong> The third generation of the World Wide Web is still emerging, but it is expected to bring new technologies 
-      <br> such as the Internet of Things, blockchain, and decentralized applications.
-      <ul>
-        <li>Allows for greater privacy, security, and peer-to-peer communication</li>
-        <li>Use case: Decentralized marketplace or social network where users can buy and sell goods and services without intermediaries</li>
-      </ul>
-    </li>
+  <h2>USE CASE 1: E-commerce website</h2>
+  <ul>
+    <li>Web 1.0: E-commerce websites in the Web 1.0 era were static and one-way. The websites were simple and provided basic information about the products and services. Customers could only browse and purchase products but could not provide feedback or interact with the website.</li>
+    <li>Web 2.0: E-commerce websites in the Web 2.0 era became more interactive and customer-oriented. Customers could provide feedback, leave reviews, and interact with other customers through social media integration. E-commerce websites also became more personalized, with product recommendations and targeted advertising based on customers' browsing and purchasing history.</li>
+    <li>Web 3.0: In the Web 3.0 era, e-commerce websites will become more intelligent and interconnected, with the use of artificial intelligence and the Internet of Things. Customers will be able to interact with virtual assistants and chatbots, and e-commerce websites will be able to provide more personalized and predictive recommendations based on customers' data and behavior.</li>
+  </ul>
+  <h2>USE CASE 2: Social networking website:</h2>
+  <ul>
+    <li>Web 1.0: Social networking websites in the Web 1.0 era were limited to one-way communication. Users could create profiles and share information, but there was no way to interact with other users or create content together.</li>
+    <li>Web 2.0: Social networking websites in the Web 2.0 era became more interactive and collaborative. Users could connect with other users, create and share content, and participate in online communities. Social networking websites also became more mobile-friendly, with the rise of smartphones and mobile apps.</li>
+    <li>Web 3.0: In the Web 3.0 era, social networking websites will become more decentralized and secure, with the use of blockchain technology. Users will have more control over their data and privacy, and social networking websites will be less reliant on centralized platforms like Facebook and Twitter.</li>
+  </ul>
+  <h2>USE CASE 3: Online education platform:</h2>
+  <ul>
+    <li>Web 1.0: Online education platforms in the Web 1.0 era were limited to static content and one-way communication. Students could access course materials and take assessments, but there was no way to interact with instructors or other students.</li>
+    <li>Web 2.0: Online education platforms in the Web 2.0 era became more interactive and collaborative. Students could participate in online discussions, collaborate on projects, and receive feedback from instructors and peers. Online education platforms also became more personalized, with adaptive learning algorithms and customized course recommendations.</li>
+    <li>Web 3.0: In the Web 3.0 era, online education platforms will become more immersive and intelligent, with the use of virtual and augmented reality. Students will be able to participate in virtual classrooms and simulations, and online education platforms will be able to provide more personalized and adaptive learning experiences based on students' data and behavior.</li>
   </ul>
 </div>
 </section>
@@ -145,25 +137,25 @@
 <p>If you'd like to get in touch with me, please fill out the form below. Be sure to include your name, email address, and a message. You can also choose a smiley face to express your mood! I'll get back to you as soon as I can. Thank you for visiting my website.</p>
   <div id="contact-form">
     <h2 style="color: rgb(0, 0, 0);">Contact Us</h2>
-    <form style=""  action="mailto:ofeklut@post.bgu.ac.il" method="post" enctype="text/plain">
+    <form>
       <div class="form-group">
-        <label for="name">Name:</label>
+        <label >Name:</label>
         <input type="text" id="name" name="name" required>
       </div>
       <div class="form-group">
-        <label for="email">Email:</label>
+        <label>Email:</label>
         <input type="email" id="email" name="email" required>
       </div>
       <div class="form-group">
-        <label for="subject">Subject:</label>
+        <label>Subject:</label>
         <input type="text" id="subject" name="subject" required>
       </div>
       <div class="form-group">
-        <label for="message">Message:</label>
+        <label >Message:</label>
         <textarea id="message" name="message" required></textarea>
       </div>
       <div class="form-group">
-        <label for="smile">Choose a smile:</label>
+        <label >Choose a smile:</label>
         <select id="smile" name="smile">
           <option value="😊">😊</option>
           <option value="😄">😄</option>
@@ -172,12 +164,24 @@
           <option value="😍">😍</option>
         </select>
       </div>
-      <button type="submit">Send</button>
+      <button type="submit" onclick="submitButton()">Send</button>
     </form>
   </div>
 <br/>
 <br/>
 </section>
+
+<script type="text/javascript">
+  function submitButton() {
+    let subject = document.getElementById("subject");
+    let message = document.getElementById("message").value 
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let smile = document.getElementById("smile").value;
+    let finalMessage = "name: " + name + "\nemail: " + email +"\nMessage: " + message + "\nsmile: " + smile
+    window.open('mailto:ofeklut@post.bgu.ac.il?subject='+ encodeURIComponent(subject.value) +'&body='+ encodeURIComponent(finalMessage));
+  }
+ </script>
 
 
 <script type="text/javascript">
